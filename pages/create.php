@@ -14,9 +14,9 @@
                             <input type="text" name="title" class="form-control" id="" placeholder="Blog Title">
                         </div>
 
-                        <div class="form-group my-3 text-center px-5">
+                        <!-- <div class="form-group my-3 text-center px-5">
                             <input type="file" name="image_name" id="" classname="form-control w-100" style="color:green;">
-                        </div>
+                        </div> -->
 
                         <div class="form-group my-3 text-center px-5">
                             <textarea name="" id="" cols="20" rows="10" name="content" placeholder="Enter Content Here" class="form-control"></textarea>
