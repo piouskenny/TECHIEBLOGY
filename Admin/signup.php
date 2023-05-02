@@ -27,7 +27,7 @@ $user_logic = new UserLogic;
                 </div>
 
                 <button class="w-100 btn btn-lg btn-success" type="submit" name="register">Sign UP</button>
-                <p class="mt-5 mb-3 text-muted">&copy; 2023</p>
+                <p class="mt-5 mb-3 text-muted text-center">&copy; 2023</p>
             </form>
         </div>
     </div>

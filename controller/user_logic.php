@@ -15,25 +15,22 @@ class UserLogic
             $email = $_POST['email'];
             $password = $_POST['password'];
 
-            echo "<div class='mt-5'>
-
-            </div>";
-
+    
             var_dump($name. "" . $email . "" . $password);
 
-            // $validate = new Validate;
-            // $validate->validate_email($email);
-            // $validate->validate_username($name);
-            // $validate->validate_password($password);
+            $validate = new Validate;
+            $validate->validate_email($email);
+            $validate->validate_username($name);
+            $validate->validate_password($password);
 
-            // $user = new User();
+            $user = new User();
 
-            // if (isset($_POST['register'])) {
-            //     $user->register($name, $email, $password);
-            //     header('Location:../Admin/signup.php');
-            // } elseif (isset($_POST['login'])) {
-            //     $user->login($email, $password);
-            // }
+            if (isset($_POST['register'])) {
+                $user->register($name, $email, $password);
+                header('Location:../Admin/signup.php');
+            } elseif (isset($_POST['login'])) {
+                $user->login($email, $password);
+            }
         }
     }
 }
