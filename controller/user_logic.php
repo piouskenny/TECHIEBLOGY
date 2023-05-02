@@ -3,18 +3,37 @@ require_once 'User.php';
 
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+use Classes\Validate;
 
-    $name = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+class UserLogic
+{
+    public function handle_request()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $user = new User();
+            $name = $_POST['username'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
 
-    if (isset($_POST['register'])) {
-        $user->register($name, $email, $password);
-        header('Location:../Admin/signup.php');
-    } elseif (isset($_POST['login'])) {
-        $user->login($email, $password);
+            echo "<div class='mt-5'>
+
+            </div>";
+
+            var_dump($name. "" . $email . "" . $password);
+
+            // $validate = new Validate;
+            // $validate->validate_email($email);
+            // $validate->validate_username($name);
+            // $validate->validate_password($password);
+
+            // $user = new User();
+
+            // if (isset($_POST['register'])) {
+            //     $user->register($name, $email, $password);
+            //     header('Location:../Admin/signup.php');
+            // } elseif (isset($_POST['login'])) {
+            //     $user->login($email, $password);
+            // }
+        }
     }
 }
