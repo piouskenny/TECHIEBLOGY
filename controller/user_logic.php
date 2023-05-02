@@ -15,8 +15,6 @@ class UserLogic
             $email = $_POST['email'];
             $password = $_POST['password'];
 
-    
-            var_dump($name. "" . $email . "" . $password);
 
             $validate = new Validate;
             $validate->validate_email($email);
@@ -33,4 +31,5 @@ class UserLogic
             }
         }
     }
+
 }
