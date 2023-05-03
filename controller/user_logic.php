@@ -17,23 +17,33 @@ class UserLogic
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-            $name = $_POST['username'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-
-
-
-            $validate->validate_email($email);
-            $validate->validate_username($name);
-            $validate->validate_password($password);
 
             $this->user = new User();
 
             if (isset($_POST['register'])) {
 
+                $name = $_POST['username'];
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+
+
+
+                $validate->validate_email($email);
+                $validate->validate_username($name);
+                $validate->validate_password($password);
+
                 $this->user->register($name, $email, $password);
-                header('Location:../Admin/login.php');
+                // header('Location:../Admin/login.php');
+                
             } elseif (isset($_POST['login'])) {
+
+                $email = $_POST['email'];
+                $password = $_POST['password'];
+
+
+
+                $validate->validate_email($email);
+                $validate->validate_password($password);
                 $this->user->login($email, $password);
                 header('Location:../Admin/dashboard.php');
             }
