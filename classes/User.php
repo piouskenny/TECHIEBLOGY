@@ -1,6 +1,6 @@
 <?php
 require_once  __DIR__ . '/../config/db_properties.php';
-require_once  __DIR__ . '/DB_interaction.php';
+require_once  __DIR__ . '/../controller/DB_interaction.php';
 
 
 class User

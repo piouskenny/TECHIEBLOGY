@@ -1,5 +1,7 @@
 <?php
-require_once 'User.php';
+
+require_once __DIR__ . '/../Classes/User.php';
+
 require_once __DIR__ . '/../Classes/Validate.php';
 
 // use App\Classes\Validate;
@@ -70,6 +72,18 @@ class UserLogic
             header('Location:../Admin/login.php');
         } else {
             return $this->user->dashboard($loggedIn_user_id);
+        }
+    }
+
+
+    public function handle_logout()
+    {
+        $this->user = new User();
+
+        $loggedIn_user_id = $this->user->isLoggedIn();
+
+        if ($loggedIn_user_id) {
+            $this->user->logout();
         }
     }
 }
