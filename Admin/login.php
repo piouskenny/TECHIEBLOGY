@@ -3,7 +3,11 @@ require __DIR__ . '/../controller/user_logic.php';
 
 require __DIR__ . '/../inc/header.php';
 
+
+
 $user_logic = new UserLogic;
+
+$user_logic->session_handler();
 ?>
 
 <div class="container mt-5">

@@ -12,6 +12,8 @@
         <title>TechieBlogyy</title>
         <link rel="stylesheet" href="<?= ASSET_URL ?>css/mdb.min.css" />
         <link rel="stylesheet" href="<?= ASSET_URL_ADMIN ?>css/mdb.min.css" />
+        <link rel="stylesheet" href="<?= ASSET_URL_ADMIN ?>css/sidebar.css" />
+
 
         <!-- Custom styles -->
         <link rel="stylesheet" href="<?= ASSET_URL ?>css/style.css" />

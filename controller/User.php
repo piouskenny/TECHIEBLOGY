@@ -41,13 +41,11 @@ class User
         $sql = "SELECT * FROM admin_user WHERE id='$id'";
         $result = $this->db->base_query($sql);
         $user = $result->fetch_assoc();
-
-
         $username = $user['username'];
-
-
         return $username;
     }
+
+
 
     public function logout()
     {

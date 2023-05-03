@@ -47,6 +47,19 @@ class UserLogic
     }
 
 
+    public function session_handler()
+    {
+        $this->user = new User();
+
+        $loggedIn_user_id = $this->user->isLoggedIn();
+
+        if ($loggedIn_user_id) {
+            header('Location:../Admin/dashboard.php');
+        } else {
+            return true;
+        }
+    }
+
     public function handle_dashboard()
     {
         $this->user = new User();
