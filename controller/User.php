@@ -36,6 +36,19 @@ class User
         }
     }
 
+    public function dashboard($id)
+    {
+        $sql = "SELECT * FROM admin_user WHERE id='$id'";
+        $result = $this->db->base_query($sql);
+        $user = $result->fetch_assoc();
+
+
+        $username = $user['username'];
+
+
+        return $username;
+    }
+
     public function logout()
     {
         session_start();
@@ -46,6 +59,7 @@ class User
     public function isLoggedIn()
     {
         session_start();
-        return isset($_SESSION['user_id']);
+        $user_id = $_SESSION['user_id'];
+        return $user_id;
     }
 }
