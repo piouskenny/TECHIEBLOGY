@@ -3,12 +3,15 @@ require_once 'User.php';
 
 
 
-use Classes\Validate;
+use App\Classes\Validate;
+
 
 class UserLogic
 {
     public function handle_request()
     {
+        $validate = new Validate();
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $name = $_POST['username'];
@@ -16,7 +19,7 @@ class UserLogic
             $password = $_POST['password'];
 
 
-            $validate = new Validate;
+
             $validate->validate_email($email);
             $validate->validate_username($name);
             $validate->validate_password($password);
@@ -31,5 +34,4 @@ class UserLogic
             }
         }
     }
-
 }

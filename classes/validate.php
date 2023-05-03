@@ -1,6 +1,7 @@
 <?php
 
-namespace Classes;
+namespace App\Classes;
+
 
 class Validate
 {
