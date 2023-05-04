@@ -9,8 +9,8 @@
             </a>
             <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-lock fa-fw me-3"></i><span>Delete Post</span></a>
             <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i class="fas fa-chart-line fa-fw me-3"></i><span>Analytics</span></a>
-            <a href="#" class="list-group-item list-group-item-action py-2 ripple">
-                <i class="fas fa-chart-pie fa-fw me-3"></i><span>SEO</span>
+            <a href="../Admin/logout.php" class="list-group-item list-group-item-action py-2 ripple text-danger">
+                <i class="fas fa-chart-pie fa-fw me-3"></i><span>Logout</span>
             </a>
         </div>
     </div>

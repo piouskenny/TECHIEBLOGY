@@ -40,9 +40,14 @@ class UserLogic
                 $email = $_POST['email'];
                 $password = $_POST['password'];
 
+
+
                 $validate->validate_email($email);
                 $validate->validate_password($password);
+
                 $this->user->login($email, $password);
+
+
                 header('Location:../Admin/dashboard.php');
             }
         }
@@ -82,8 +87,11 @@ class UserLogic
 
         $loggedIn_user_id = $this->user->isLoggedIn();
 
-        if ($loggedIn_user_id) {
+        if (!$loggedIn_user_id) {
+            header('Location:../Admin/login.php');
+        } else {
             $this->user->logout();
+            header('Location:../Admin/login.php');
         }
     }
 }

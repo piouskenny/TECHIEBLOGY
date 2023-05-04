@@ -4,10 +4,9 @@ require __DIR__ . '/../controller/user_logic.php';
 require __DIR__ . '/../inc/header.php';
 
 
-
 $user_logic = new UserLogic;
 
-$user_logic->session_handler();
+// $user_logic->session_handler();
 ?>
 
 <div class="container mt-5">
@@ -26,7 +25,11 @@ $user_logic->session_handler();
                         <label for="floatingPassword">Password</label>
                     </div>
 
+                    <!-- <button class="w-100 btn btn-lg btn-success" type="submit" name="signin">Login</button>
+                 -->
                     <button class="w-100 btn btn-lg btn-success" type="submit" name="login">Login</button>
+
+
                     <p class="mt-5 mb-3 text-muted text-center">&copy; 2023</p>
                 </form>
             </div>
