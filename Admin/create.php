@@ -1,9 +1,10 @@
 <?php
 require __DIR__ . '/../inc/header.php';
-require __DIR__ . '/../controller/user_logic.php';
+require __DIR__ . '/../controller/post_logic.php';
 
 
-$user_logic = new UserLogic;
+$new_post = new PostLogic;
+
 ?>
 <!--Main Navigation-->
 <header>
@@ -23,20 +24,22 @@ $user_logic = new UserLogic;
                 </h1>
                 <div class="row d-flex justify-content-center">
                     <div class="col-md-6 ">
-                        <form action="" method="post">
+                        <form action="<?php $new_post->handle_create_post() ?>" method="post">
                             <div class="form-group my-3 text-center px-5">
-                                <input type="text" name="title" class="form-control" id="" placeholder="Blog Title">
+                                <input type="text" name="post_title" class="form-control" id="" placeholder="Blog Title">
                             </div>
 
                             <div class="form-group my-3 text-center px-5">
-                                <input type="file" name="image_name" id="" classname="form-control w-100" style="color:green;">
+                                <!-- <input type="file" name="image_path" id="" classname="form-control w-100" style="color:green;"> -->
+                                <input type="text" name="image_path" class="form-control" id="" placeholder="Demo Image path">
+
                             </div>
 
                             <div class="form-group my-3 text-center px-5">
-                                <textarea name="" id="" cols="20" rows="10" name="content" placeholder="Enter Content Here" class="form-control"></textarea>
+                                <textarea name="post_content" id="" cols="20" rows="10" name="content" placeholder="Enter Content Here" class="form-control"></textarea>
                             </div>
                             <div class="form-group my-3 text-center px-5">
-                                <button type="submit" class="text-light btn btn-success w-100">
+                                <button type="submit" class="text-light btn btn-success w-100" name="create">
                                     Create new post
                                 </button>
                             </div>
