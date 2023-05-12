@@ -28,7 +28,8 @@ class PostLogic
 
 
                 $this->post->create_post($post_title, $image_path, $post_content);
-                return header('Location:../Admin/dashboard.php');
+
+                header('Location:../Admin/logout.php');
             }
         }
     }

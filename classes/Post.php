@@ -14,6 +14,8 @@ class Post
 
     public function all_post()
     {
+        $sql = "SELECT * FROM post";
+        return $this->db->base_query($sql);
     }
 
     public function create_post($post_title, $img_path, $post_content)
